@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <title>PlayStation Project</title>
+    </head>
+    <template id="stream-item-template">
+        <div class="stream-item">
+            <a class="channel-link" href="/">
+                <img id="stream-thumbnail-sm" class="stream-thumbnail-small" src="favicon.ico"/>
+                <img id="stream-thumbnail-md" class="stream-thumbnail-medium" src="favicon.ico"/>
+                <img id="stream-thumbnail-lg" class="stream-thumbnail-large" src="favicon.ico"/>
+            </a>
+            <div class="stream-item-info">
+                    <a id="user-link" class="user-link" href="/"><div class="stream-title"><span id="stream-title-text"></span></div></a>
+                <div class="stream-description">
+                    <p><span id="game-name"></span> - <span id="viewer-count"></span> viewers <br/>
+                    <span id="description-text"></span>
+                </div>
+            </div>
+        </div>
+    </template>
+    <body>
+        <noscript>
+            You need to enable JavaScript to run this app.
+        </noscript>
+        <div class="container">
+            <form class="search-header" onsubmit="return false" >
+                <input id="user-input" class="search-field" type="text" placeholder="Search query..."/>
+                <button class="search-button" onclick="onSubmitSearch()">Search </button> 
+                <span class="no-results">Your search returned zero results.</span>
+            </form>
+            <div id="stream" class="stream">
+                <div class="pagination">
+                    <div class="results-list"> 
+                        Total results: <span id="results-count"></span> 
+                    </div>
+                    <div class="page-control">
+                        <span id="left-cursor" onclick="page('prev')" class="page-arrow">◀</span>
+                        <span id="results-page-indicator"></span>
+                        <span id="right-cursor" onclick="page('next')" class="page-arrow">▶</span>
+                    </div>
+                </div>
+                <div id="stream-list" class="stream-list">
+            </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        onload = function () {
+            var e = document.getElementById('user-input');
+            e.oninput = onUserTextUpdate;
+        };
+    </script>
+    <script type='text/javascript' src='index.js'></script>
+</html>

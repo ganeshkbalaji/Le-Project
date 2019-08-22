@@ -1,0 +1,143 @@
+.container {
+    width: 70%;
+    outline: solid black 1px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.stream {
+    display: none;
+    outline: solid black 1px;
+    height: 100%;
+    padding: 20px;
+    padding-top: 5px;
+}
+
+.search-header {
+    padding: 30px;
+    padding-top: 45px;
+    display: flex;
+}
+
+.search-header > * {
+    margin-right: 10px
+}
+
+.search-field {
+    width: 140px;
+}
+
+.search-button {
+    width: 80px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+.current-page {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.page-arrow {
+    display: none;
+    cursor: pointer;
+}
+
+.no-results {
+    display: none;
+    font-style: italic;
+    color: red;
+}
+
+.stream-list {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.stream-item {
+    display: flex;
+    padding-top: 20px;
+    flex-wrap: row;
+}
+
+.stream-item-info {
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+.stream-title {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.stream-description {
+    margin-left: 5px;
+}
+
+.user-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.channel-link > img {
+    border-radius: 5px;
+}
+
+.stream-thumbnail-small {
+    display: none;
+}
+
+.stream-thumbnail-medium {
+    display: none;
+}
+
+.stream-thumbnail-large {
+    display: none;
+}
+
+@media only screen and (min-width: 500px){
+    .stream-thumbnail-small {
+        display: block;
+    }
+
+    .stream-thumbnail-medium {
+        display: none;
+    }
+
+    .stream-thumbnail-large {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .stream-thumbnail-small {
+        display: none;
+    }
+
+    .stream-thumbnail-medium {
+        display: block;
+    }
+
+    .stream-thumbnail-large {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1300px){
+    .stream-thumbnail-small {
+        display: none;
+    }
+
+    .stream-thumbnail-medium {
+        display: none;
+    }
+
+    .stream-thumbnail-large {
+        display: block;
+    }
+}
